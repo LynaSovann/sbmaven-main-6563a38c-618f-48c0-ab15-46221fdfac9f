@@ -1,0 +1,19 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: sbmaven-main-6563a38c-618f-48c0-ab15-46221fdfac9f-ingress
+  namespace: sbmaven-main-6563a38c-618f-48c0-ab15-46221fdfac9f
+  annotation:
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: lyna-sbmaven-main.tinhlgkiddy.fun
+    http:
+      paths:
+      - path: /
+        pathType: Prefix  
+        backend:
+          service:
+            name: sbmaven-main-6563a38c-618f-48c0-ab15-46221fdfac9f-service 
+            port:
+              number: 8084
